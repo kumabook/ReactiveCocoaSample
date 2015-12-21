@@ -24,6 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67118F3A1C278AAE00F4CC0F /* FeedlyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FeedlyKit.framework; path = Carthage/Checkouts/FeedlyKit/build/Debug/FeedlyKit.framework; sourceTree = "<group>"; };
+		67118F3B1C278AAE00F4CC0F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Checkouts/SwiftyJSON/build/Debug/SwiftyJSON.framework; sourceTree = "<group>"; };
 		67A9BFED1C20F4E000611B18 /* ReactiveCocoaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A9BFF01C20F4E000611B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A9BFF21C20F4E000611B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		67A9BFFC1C20F4E100611B18 /* ReactiveCocoaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A9C0001C20F4E100611B18 /* ReactiveCocoaSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaSampleTests.swift; sourceTree = "<group>"; };
 		67A9C0021C20F4E100611B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A9C00B1C277A8F00611B18 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		67A9C00C1C277A8F00611B18 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,12 @@
 		67A9BFE41C20F4E000611B18 = {
 			isa = PBXGroup;
 			children = (
+				67118F3A1C278AAE00F4CC0F /* FeedlyKit.framework */,
+				67118F3B1C278AAE00F4CC0F /* SwiftyJSON.framework */,
 				67A9BFEF1C20F4E000611B18 /* ReactiveCocoaSample */,
 				67A9BFFF1C20F4E100611B18 /* ReactiveCocoaSampleTests */,
 				67A9BFEE1C20F4E000611B18 /* Products */,
+				67A9C0141C277AFA00611B18 /* Framworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +95,15 @@
 				67A9C0021C20F4E100611B18 /* Info.plist */,
 			);
 			path = ReactiveCocoaSampleTests;
+			sourceTree = "<group>";
+		};
+		67A9C0141C277AFA00611B18 /* Framworks */ = {
+			isa = PBXGroup;
+			children = (
+				67A9C00B1C277A8F00611B18 /* ReactiveCocoa.framework */,
+				67A9C00C1C277A8F00611B18 /* Result.framework */,
+			);
+			name = Framworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +325,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = ReactiveCocoaSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.ReactiveCocoaSample;
@@ -321,6 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = ReactiveCocoaSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.kumabook.ReactiveCocoaSample;
@@ -373,6 +397,7 @@
 				67A9C0071C20F4E100611B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67A9C0081C20F4E100611B18 /* Build configuration list for PBXNativeTarget "ReactiveCocoaSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -381,6 +406,7 @@
 				67A9C00A1C20F4E100611B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
